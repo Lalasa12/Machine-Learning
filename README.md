@@ -223,5 +223,285 @@ Unsupervised	No	Customer grouping
 Reinforcement	Reward-based	Robot navigation
 
 
+Prediction
+
+Guessing a future value using past day.
+
+Example:
+
+Yesterday's Temperature = 20 degree celsius
+
+Today Temperature = 15 degree Celsius
+
+Tomorrow Temperature = Prediction.
+
+Regression:
+
+Relationship between the dependent variable(target or response variable) and independent variable(features or predictors).
+
+Example:
+
+Problem	Output	Regression?
+Predict salary	Number	✅
+Predict house price	Number	✅
+Predict marks	Number	✅
+Predict pass/fail	Yes/No	❌
+Predict spam/not spam	Category	❌
+So,if the output is a number then it is regression.
+
+Types Of Regression.
+
+1.Linear Regression
+
+Why We need Linear Regression?
+
+Real life Situation:
+
+Experience (years)	Salary (₹)
+1	20,000
+
+2	30,000
+
+3	45,000
+
+4	60,000
+
+Now a new person comes
+
+Experience = 5
+
+How much salary should we give?
+
+So we need a model to predict the salary.This is where Linear Regression is used.
+
+What is Linear Regression?
+
+The relationship between the single independent variable and dependent variable.
+
+(or)
+
+Used to predict the continuous numerical values by straight line relationship between the input and output.
+
+input=experience output=salary Result=Number
+
+why it is called Linear?
+
+Linear = Straight Line
+
+So,if we draw a graph
+
+X-axis = Experience
+
+Y-axis = salary
+
+All points roughly through Straight Line.
+
+Formula:
+
+Y=mx+c
+
+x = input(Experience)
+
+y = output(Salary)
+
+m = slope(How fast salary increases)
+
+c = intercept(Starting Salary)
+
+How Linear Regression Learns?
+
+1.Takes Training Data
+
+2.Draws a line
+
+3.Calculates Error
+
+4.Adjusts the Line
+
+5.Repeat until the error is minimum
+
+Daily Life Scenerio:
+
+1.First throw → misses basket
+
+2️. See how far you missed (error)
+
+3️. Adjust your hand
+
+4️. Throw again
+
+5️. Practice until you score
+
+
+from sklearn.linear_model import LinearRegression
+
+X = [[1],[2],[3],[4],[5]]
+
+y = [20000,50000,40000,54400,78000]
+
+model = LinearRegression()
+
+model.fit(X,y)
+
+prediction = model.predict([[6]])
+
+print(prediction)
+
+[84600.]
+
+Step 1:
+
+Import the Algorithm:
+
+sklearn = Ml Library
+
+linear_module = Module for linear models
+
+LinearRegression = Algorithm
+
+Step 2:
+
+Input Data = X
+
+Step 3:
+
+Output Data = y(Target/Label)
+
+** Step 4:**
+
+Create a Model
+
+Step 5:
+
+Train a Model
+
+What fit() does:
+
+Takes input X
+
+Takes output y
+
+Learns relationship between them.
+
+Step 6:
+
+Predict the output
+
+Step 7:
+
+Print the result
+
+2.Multiple Linear Regression
+
+The model tries to establish the relationship between the dependent variable and the multiple independent variable.
+
+(or)
+
+Multiple Linear Regression is a supervised regression algorithm used to predict a NUMBER using MORE THAN ONE input feature.
+
+Why do we need Multiple Linear Regression?
+
+In Linear Regression,
+
+We use only one input like Experience --> Salary.
+
+But Real life not like that.
+
+Real-life example- House Price
+
+House price depends on:
+
+1.Size (sq ft)
+
+2.Number of rooms
+
+3.Location
+
+4.Age of house
+
+More than one input
+
+So we need:
+
+Multiple Linear Regression
+
+Formula:
+
+y = m1x1 + m2x2 + m3x3 + c
+
+x1 → Experience
+
+x2 → Education
+
+x3 → Skills
+
+y → Salary
+
+Still a straight-line idea, just more inputs.
+
+
+[3]
+0s
+from sklearn.linear_model import LinearRegression
+
+X = [
+    [1, 1, 1],
+    [2, 2, 2],
+    [3, 3, 3],
+    [4, 4, 4]
+]
+
+y = [20000, 30000, 45000, 60000]
+
+model = LinearRegression()
+
+model.fit(X, y)
+
+model.predict([[5, 5, 5]])
+
+array([72500.])
+
+Feature:
+
+It is a input value used to make prediction.
+
+Example:
+
+Feature (Input)	Type
+
+Experience	Feature
+
+Education	Feature
+
+Skills	Feature
+
+Salary	❌ Output (NOT feature)
+
+Features = X values output = y values
+
+Example:
+
+Column	Feature or Output?
+
+Size	Feature
+
+Rooms	Feature
+
+Location	Feature
+
+Price	Output
+
+Note: Feature = Input column
+
+1.feature → Line 📈
+
+2.features → Plane 🟦
+
+Many features → Multi-dimensional surface
+
+
+
+
+
 
 
