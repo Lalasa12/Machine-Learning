@@ -501,7 +501,87 @@ Many features → Multi-dimensional surface
 
 
 
+Model Evaluation
+
+Means Checking the Performance of ml model.
+
+In Simple Words:
+
+1.Did the model predict Correctly?
+
+2.How much mistake did it make?
 
 
+
+Why we need Model Evaluation
+1.Model should be look good but it sometimes wrong.
+
+2.So We can measures the mistakes.
+
+3.We must compare the models.
+
+Without Evaluation we do not know how good the model is.
+
+
+
+Error
+Error = Actual Value - Predicted Value
+
+eg:
+
+Actual Salary = 50000
+
+Predicted Salary = 45000
+
+Error = 5000
+
+Error tells us about how wrong my prediction is.
+
+
+
+Regression Evaluation Metrics
+2.Mean Squared Error
+Average of all squared Errors.
+
+Why square?
+
+To give more punishment to big errors
+
+Big mistakes → very big penalty
+
+RMSE – Root Mean Squared Error
+Meaning:
+
+Square root of MSE
+
+Why?
+
+Brings error back to original unit (salary, price)
+
+Easy to understand in real life.
+
+
+
+Accuracy vs Error
+Accuracy is used in the Classification.
+
+Error is used in the prediction(numbers).
+
+Why Overfitting Happens?
+
+Too complex model
+
+Too little data
+
+Model memorizes instead of learning
+
+DAILY LIFE
+Learning English
+
+Memorizing sentences only → Overfitting
+
+Not learning grammar → Underfitting
+
+Understanding + practice → Good fit
 
 
