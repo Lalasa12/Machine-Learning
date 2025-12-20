@@ -585,3 +585,67 @@ Not learning grammar → Underfitting
 Understanding + practice → Good fit
 
 
+Bias
+Bias is an error introduced by approximating the real world problem with a simplified model.
+
+(or)
+
+The model is too simple,so it makes wrong assumptions and misses real patterns.
+
+leads to underfitting
+Eg:
+
+Everyone is around 25 years old
+
+so you guess:
+
+-25 -25 -25
+
+Even if actual age is 45 or 10.You are consistently wrong.This is called as High Bias.
+
+Training error = High
+
+Testing Error = High
+
+then underfitting.
+
+Variance
+Variance is an error introduced by model sensitivity to small fluctations in the training data.
+
+(or)
+
+guesses change too much every time.
+
+Eg:
+
+You guess:
+
+10
+
+50
+
+30
+
+70
+
+No consistency
+
+Sometimes right,mostly wrong.This is called as high Variance.
+
+This Leads to Overfitting.
+
+Training Error = Very Low
+
+Testing Error = High
+
+This is overfitting
+
+Case	Bias	Variance	Meaning
+Underfitting	High	Low	Too simple
+Overfitting	Low	High	Too complex
+Good Model	Low	Low	Balanced
+Bias-Variance Tradeoff
+The balance between the highbias(underfitting) and high variance(overfitting).A model with high bias is too simple and underfits the data,while a model with high variance is too complex and overfits the data.The goal is to find a balance that minimizes error on unseen data.
+
+
+
