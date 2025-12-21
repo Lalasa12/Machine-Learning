@@ -540,7 +540,9 @@ Error tells us about how wrong my prediction is.
 
 
 Regression Evaluation Metrics
+
 2.Mean Squared Error
+
 Average of all squared Errors.
 
 Why square?
@@ -641,11 +643,57 @@ Testing Error = High
 This is overfitting
 
 Case	Bias	Variance	Meaning
+
 Underfitting	High	Low	Too simple
+
 Overfitting	Low	High	Too complex
+
 Good Model	Low	Low	Balanced
+
 Bias-Variance Tradeoff
+
 The balance between the highbias(underfitting) and high variance(overfitting).A model with high bias is too simple and underfits the data,while a model with high variance is too complex and overfits the data.The goal is to find a balance that minimizes error on unseen data.
+
+Logistic Regression
+Logistic Regression is a supervised machine learning algorithm used to predict the categorical outcomes9usually binary) using probability.
+
+Eg:
+
+Probability of passing Exam.
+Probability of spam email.
+output sholud be either 0 or 1.
+
+Sigmoid Function
+The Sigmoid function is a mathematical function that converts any real number into a value between 0 and 1.
+
+Formula:
+
+σ(z) = 1 / (1 + e⁻ᶻ)
+
+z is the raw score produced by the model before classification.
+e is the mathematical constant(~2.718)
+e raised to the power of -z means how fast the probability changes.
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+X = [[1],[2],[3],[4],[5]]
+y = [0,0,0,1,1]
+
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=42)
+
+model = LogisticRegression()
+model.fit(X_train,y_train)
+
+prediction = model.predict([[3]])
+print(prediction)
+[0]
+Feature	Linear Regression	Logistic Regression
+Problem type	Regression	Classification
+Output	Number	0 or 1
+Use case	Salary	Pass/Fail
+Curve	Straight line	S-curve
+
+
 
 
 
